@@ -52,7 +52,8 @@ def install_ipfs():
   for n in [el for s in topology for el in s['storaged']]+[el for s in cloud for el in s['exportd']]:
 #    execo.Process('scp /home/bconfais/ipfs_common_backend_v1a '+str(n['ip'])+':/tmp/ipfs').run().stdout
 #    execo.Process('scp /home/bconfais/ipfs_k1_normal '+str(n['ip'])+':/tmp/ipfs').run().stdout
-    execo.Process('scp /home/bconfais/ipfs_centralized_metadata_v1c_big_workers_and_no_ratelimiter_2 '+str(n['ip'])+':/tmp/ipfs').run().stdout
+    execo.Process('scp /home/bconfais/ipfs_central '+str(n['ip'])+':/tmp/ipfs').run().stdout
+#    execo.Process('scp /home/bconfais/ipfs_centralized_metadata_v1c_big_workers_and_no_ratelimiter_2 '+str(n['ip'])+':/tmp/ipfs').run().stdout
 #    execo.Process('scp /home/bconfais/ipfs2 '+str(n['ip'])+':/tmp/ipfs').run().stdout
 #    execo.Process('scp /home/bconfais/common_ipfs_try '+str(n['ip'])+':/tmp/ipfs').run().stdout
     execo.Process('scp /home/bconfais/ipfs.service '+str(n['ip'])+':/etc/systemd/system/ipfs.service').run().stdout
@@ -535,7 +536,7 @@ def s3():
               target=ycsb_thread,
 #              args=(('cd /tmp/YCSB; ./bin/ycsb load ipfs -p ipfs.host1=%s -p ipfs.host2=%s -p ipfs.host3=%s -p ipfs.host4=%s %s -P workloads/workloadc' % (str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']), ycsb_args)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_load.txt' % (i_object, trial, i_site+1, i_client+1)),)
 #              args=(('cd /tmp/YCSB; ./bin/ycsb load dummy -p dummy.path=%s %s -P workloads/workloadc' % (str(config['rozofs']['mount_dir']), ycsb_args)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_load.txt' % (i_object, trial, i_site+1, i_client+1)),)
-              args=(('cd /tmp/; python2 bench.py write %d %d %s %s %s %s' % (object['number'], object['size'], str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']),)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_load.txt' % (i_object, trial, i_site+1, i_client+1)),)
+              args=(('cd /tmp/; python2 bench.py write %d %d %s %s %s %s' % (object['number'], object['size']*1000*1000, str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']),)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_load.txt' % (i_object, trial, i_site+1, i_client+1)),)
             )
           )
           threads_read.append(
@@ -543,7 +544,7 @@ def s3():
               target=ycsb_thread,
 #              args=(('cd /tmp/YCSB; ./bin/ycsb run ipfs -p ipfs.host1=%s -p ipfs.host2=%s -p ipfs.host3=%s -p ipfs.host4=%s %s -P workloads/workloadc' % (str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']), ycsb_args)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_run.txt' % (i_object, trial, i_site+1, i_client+1)),)
 #              args=(('cd /tmp/YCSB; ./bin/ycsb run dummy -p dummy.path=%s %s -P workloads/workloadc' % (str(config['rozofs']['mount_dir']), ycsb_args)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_run.txt' % (i_object, trial, i_site+1, i_client+1)),)
-              args=(('cd /tmp/; python2 bench.py read %d %d %s %s %s %s' % (object['number'], object['size'], str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']),)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_run.txt' % (i_object, trial, i_site+1, i_client+1)),)
+              args=(('cd /tmp/; python2 bench.py read %d %d %s %s %s %s' % (object['number'], object['size']*1000*1000, str(topology[i_site]['storaged'][0]['ip']), str(topology[i_site]['storaged'][1]['ip']), str(topology[i_site]['storaged'][2]['ip']), str(topology[i_site]['storaged'][3]['ip']),)), topology[i_site]['client'][i_client], ('object%d_trial%d_site%d_client%d_run.txt' % (i_object, trial, i_site+1, i_client+1)),)
             )
           )
           # one client one each site 
@@ -795,9 +796,15 @@ if '__main__' == __name__:
   if False:
     install_ipfs()
     mount_normal()
+    raw_input('go')
+
     deploy_ipfs()
+    raw_input('go')
+
+#    install_ycsb()
     set_latencies()
     iptables_collect()
+
     sys.exit(0)
 
 
