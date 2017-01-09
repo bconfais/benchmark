@@ -15,21 +15,13 @@ def timing(f):
     time1 = time.time()
     ret = f(*args)
     time2 = time.time()
-    times.append(float(time2-time1)*1000.0*1000.0)
+    if True == ret:
+      times.append(float(time2-time1)*1000.0*1000.0)
     return ret
   return wrap
 
 @timing
 def write(node, id_file, i):
-#  response = requests.post('http://%s:5001/api/v0/block/put?stream-channel=true' % node,
-#    files={'file': ('file.txt', data, 'text/plain', {})}
-#  )
-#  
-#  id_file[1].acquire()
-#  if 200 == response.status_code:
-#    id_file[0].write(response.json()['Key']+'\n')
-#  id_file[1].release()
-
   buffer = StringIO()
   c = pycurl.Curl()
   c.setopt(c.URL, 'http://%s:5001/api/v0/block/put?stream-channel=false' % (node))
@@ -41,6 +33,7 @@ def write(node, id_file, i):
   id_file[1].acquire()
   id_file[0].write(response['Key']+'\n')
   id_file[1].release()
+  return True
 
 @timing
 def read(node, key, size):
@@ -50,6 +43,9 @@ def read(node, key, size):
   c.setopt(c.WRITEDATA, buffer)
   c.perform()
   c.close()
+  s = len(buffer.getvalue())
+  print('read %d bytes' % s)
+  return (size == s)
 
 
 if '__main__' == __name__:
