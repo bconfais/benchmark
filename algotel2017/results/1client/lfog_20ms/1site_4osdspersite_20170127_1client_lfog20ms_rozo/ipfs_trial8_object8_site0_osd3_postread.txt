@@ -1,0 +1,107 @@
+Chain INPUT (policy ACCEPT 108 packets, 458K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 8128  103M ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+ 4839  421K ACCEPT     all  --  *      *       10.158.0.10          0.0.0.0/0           
+ 4298  362K ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+ 4049  102M ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+  254 44104 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+74639 4175K ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 91305 packets, 716M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    3214810 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    3214806 incoming packets delivered
+    2966308 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    92 active connections openings
+    3613 passive connection openings
+    0 failed connection attempts
+    1567 connection resets received
+    13 connections established
+    3209024 segments received
+    9547392 segments send out
+    13853 segments retransmited
+    0 bad segments received.
+    119 resets sent
+Udp:
+    5757 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5752 packets sent
+UdpLite:
+TcpExt:
+    23 invalid SYN cookies received
+    22 TCP sockets finished time wait in fast timer
+    1922 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 383 times
+    4 times the listen queue of a socket overflowed
+    4 SYNs to LISTEN sockets dropped
+    18967 packets directly queued to recvmsg prequeue.
+    230051481 bytes directly received in process context from prequeue
+    1328840 packet headers predicted
+    14856 packets header predicted and directly queued to user
+    403874 acknowledgments not containing data payload received
+    1088907 predicted acknowledgments
+    3827 times recovered from packet loss by selective acknowledgements
+    Detected reordering 10 times using FACK
+    Detected reordering 297 times using SACK
+    Detected reordering 43 times using time stamp
+    43 congestion windows fully recovered without slow start
+    78 congestion windows partially recovered using Hoe heuristic
+    20 congestion windows recovered without slow start by DSACK
+    48 congestion windows recovered without slow start after partial ack
+    51 timeouts after SACK recovery
+    10 timeouts in loss state
+    11990 fast retransmits
+    1228 forward retransmits
+    410 retransmits in slow start
+    1 other TCP timeouts
+    TCPLossProbes: 14
+    TCPLossProbeRecovery: 13
+    147 SACK retransmits failed
+    383 DSACKs sent for old packets
+    667 DSACKs received
+    258 DSACKs for out of order packets received
+    34 connections reset due to unexpected data
+    30 connections reset due to early user close
+    TCPDSACKIgnoredOld: 16
+    TCPDSACKIgnoredNoUndo: 244
+    TCPSpuriousRTOs: 48
+    TCPSackShifted: 476
+    TCPSackMerged: 44130
+    TCPSackShiftFallback: 291916
+    TCPRcvCoalesce: 151062
+    TCPOFOQueue: 191881
+    TCPSpuriousRtxHostQueues: 8
+    TCPAutoCorking: 74515
+    TCPOrigDataSent: 8109811
+IpExt:
+    OutMcastPkts: 6
+    InBcastPkts: 32
+    InOctets: 15520718989
+    OutOctets: 14472925596
+    OutMcastOctets: 978
+    InBcastOctets: 12448
+    InNoECTPkts: 3214810

@@ -1,0 +1,108 @@
+Chain INPUT (policy ACCEPT 121 packets, 459K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 6431  143M ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.24          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+ 6423  143M ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+  222 50940 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+ 111K 6618K ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 126K packets, 292M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    2688286 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    2688282 incoming packets delivered
+    2516431 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    82 active connections openings
+    3245 passive connection openings
+    0 failed connection attempts
+    1327 connection resets received
+    13 connections established
+    2682342 segments received
+    7802124 segments send out
+    31923 segments retransmited
+    0 bad segments received.
+    95 resets sent
+Udp:
+    5789 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5616 packets sent
+UdpLite:
+TcpExt:
+    19 invalid SYN cookies received
+    20 TCP sockets finished time wait in fast timer
+    1619 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 369 times
+    2 times the listen queue of a socket overflowed
+    2 SYNs to LISTEN sockets dropped
+    20534 packets directly queued to recvmsg prequeue.
+    105360 bytes directly in process context from backlog
+    219300926 bytes directly received in process context from prequeue
+    1113156 packet headers predicted
+    15850 packets header predicted and directly queued to user
+    503802 acknowledgments not containing data payload received
+    799305 predicted acknowledgments
+    7642 times recovered from packet loss by selective acknowledgements
+    Detected reordering 7 times using FACK
+    Detected reordering 574 times using SACK
+    Detected reordering 108 times using time stamp
+    56 congestion windows fully recovered without slow start
+    135 congestion windows partially recovered using Hoe heuristic
+    18 congestion windows recovered without slow start by DSACK
+    366 congestion windows recovered without slow start after partial ack
+    159 timeouts after SACK recovery
+    292 timeouts in loss state
+    21041 fast retransmits
+    2997 forward retransmits
+    5704 retransmits in slow start
+    8 other TCP timeouts
+    TCPLossProbes: 85
+    TCPLossProbeRecovery: 75
+    1592 SACK retransmits failed
+    369 DSACKs sent for old packets
+    1143 DSACKs received
+    344 DSACKs for out of order packets received
+    29 connections reset due to unexpected data
+    26 connections reset due to early user close
+    TCPDSACKIgnoredOld: 24
+    TCPDSACKIgnoredNoUndo: 462
+    TCPSpuriousRTOs: 340
+    TCPSackShifted: 630
+    TCPSackMerged: 102550
+    TCPSackShiftFallback: 444850
+    TCPRcvCoalesce: 122672
+    TCPOFOQueue: 127025
+    TCPSpuriousRtxHostQueues: 3
+    TCPAutoCorking: 62219
+    TCPOrigDataSent: 6649948
+IpExt:
+    OutMcastPkts: 10
+    InBcastPkts: 330
+    InOctets: 13032866492
+    OutOctets: 11770535659
+    OutMcastOctets: 1630
+    InBcastOctets: 138176
+    InNoECTPkts: 2688311

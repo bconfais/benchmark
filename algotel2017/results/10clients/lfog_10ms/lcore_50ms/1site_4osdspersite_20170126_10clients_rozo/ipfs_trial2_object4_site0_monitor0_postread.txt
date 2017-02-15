@@ -1,0 +1,87 @@
+Chain INPUT (policy ACCEPT 173 packets, 464K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+  170 17876 ACCEPT     all  --  *      *       10.158.0.25          0.0.0.0/0           
+  146 14964 ACCEPT     all  --  *      *       10.158.0.26          0.0.0.0/0           
+  135 13616 ACCEPT     all  --  *      *       10.158.0.27          0.0.0.0/0           
+  169 18048 ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.35          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.36          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.4           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.5           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 780 packets, 179K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    77829 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    77825 incoming packets delivered
+    76132 requests sent out
+Icmp:
+    12 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        echo requests: 2
+        echo replies: 10
+    12 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo request: 10
+        echo replies: 2
+IcmpMsg:
+        InType0: 10
+        InType8: 2
+        OutType0: 2
+        OutType8: 10
+Tcp:
+    3826 active connections openings
+    292 passive connection openings
+    74 failed connection attempts
+    3752 connection resets received
+    21 connections established
+    74829 segments received
+    73741 segments send out
+    2 segments retransmited
+    0 bad segments received.
+    3724 resets sent
+Udp:
+    2826 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    2802 packets sent
+UdpLite:
+TcpExt:
+    22 TCP sockets finished time wait in fast timer
+    291 delayed acks sent
+    Quick ack mode was activated 12 times
+    122 packets directly queued to recvmsg prequeue.
+    512 bytes directly received in process context from prequeue
+    41817 packet headers predicted
+    14 packets header predicted and directly queued to user
+    9227 acknowledgments not containing data payload received
+    29655 predicted acknowledgments
+    TCPLossProbes: 2
+    12 DSACKs sent for old packets
+    3706 connections reset due to unexpected data
+    16 connections reset due to early user close
+    TCPRcvCoalesce: 3608
+    TCPOFOQueue: 18
+    TCPAutoCorking: 2054
+    TCPOrigDataSent: 50103
+IpExt:
+    InBcastPkts: 182
+    InOctets: 57485537
+    OutOctets: 17738904
+    InBcastOctets: 63619
+    InNoECTPkts: 77829

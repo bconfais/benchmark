@@ -1,0 +1,104 @@
+Chain INPUT (policy ACCEPT 240 packets, 918K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+96890 5304K ACCEPT     all  --  *      *       10.158.0.25          0.0.0.0/0           
+98719 5386K ACCEPT     all  --  *      *       10.158.0.26          0.0.0.0/0           
+92685 5067K ACCEPT     all  --  *      *       10.158.0.27          0.0.0.0/0           
+92468 5038K ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.35          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.36          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.4           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.5           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 375K packets, 1023M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    7898381 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    7898377 incoming packets delivered
+    7857263 requests sent out
+Icmp:
+    8 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        echo replies: 8
+    8 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo request: 8
+IcmpMsg:
+        InType0: 8
+        OutType8: 8
+Tcp:
+    6419 active connections openings
+    640 passive connection openings
+    0 failed connection attempts
+    2 connection resets received
+    4 connections established
+    7888842 segments received
+    12955968 segments send out
+    1355 segments retransmited
+    0 bad segments received.
+    46 resets sent
+Udp:
+    9217 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    9135 packets sent
+UdpLite:
+TcpExt:
+    6155 TCP sockets finished time wait in fast timer
+    3 packets rejects in established connections because of timestamp
+    1041 delayed acks sent
+    9 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 7408 times
+    73450 packets directly queued to recvmsg prequeue.
+    232448 bytes directly in process context from backlog
+    509348088 bytes directly received in process context from prequeue
+    1907018 packet headers predicted
+    43805 packets header predicted and directly queued to user
+    1729816 acknowledgments not containing data payload received
+    2004221 predicted acknowledgments
+    526 times recovered from packet loss by selective acknowledgements
+    Detected reordering 10 times using FACK
+    Detected reordering 186 times using SACK
+    Detected reordering 22 times using time stamp
+    281 congestion windows fully recovered without slow start
+    229 congestion windows partially recovered using Hoe heuristic
+    3 congestion windows recovered without slow start by DSACK
+    760 fast retransmits
+    592 forward retransmits
+    TCPLossProbes: 36
+    TCPLossProbeRecovery: 3
+    7411 DSACKs sent for old packets
+    1732 DSACKs sent for out of order packets
+    1276 DSACKs received
+    1 connections reset due to unexpected data
+    41 connections reset due to early user close
+    TCPDSACKIgnoredOld: 13
+    TCPDSACKIgnoredNoUndo: 744
+    TCPSackShifted: 120
+    TCPSackMerged: 36271
+    TCPSackShiftFallback: 620494
+    TCPRcvCoalesce: 389486
+    TCPOFOQueue: 1128258
+    TCPOFOMerge: 1735
+    TCPAutoCorking: 95
+    TCPOrigDataSent: 9244914
+IpExt:
+    InBcastPkts: 392
+    InOctets: 11884952986
+    OutOctets: 13829280112
+    InBcastOctets: 142270
+    InNoECTPkts: 7898381

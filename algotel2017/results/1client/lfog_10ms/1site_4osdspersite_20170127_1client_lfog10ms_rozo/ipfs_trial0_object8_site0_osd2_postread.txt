@@ -1,0 +1,107 @@
+Chain INPUT (policy ACCEPT 112 packets, 458K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 6457  113M ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+ 3012   26M ACCEPT     all  --  *      *       10.158.0.24          0.0.0.0/0           
+  790   20M ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+ 6691  108M ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+  224 49228 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+ 104K 6259K ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 123K packets, 435M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    1040594 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    1040590 incoming packets delivered
+    967364 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    73 active connections openings
+    2647 passive connection openings
+    0 failed connection attempts
+    1041 connection resets received
+    13 connections established
+    1035004 segments received
+    3043082 segments send out
+    10475 segments retransmited
+    0 bad segments received.
+    85 resets sent
+Udp:
+    5435 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5262 packets sent
+UdpLite:
+TcpExt:
+    15 invalid SYN cookies received
+    18 TCP sockets finished time wait in fast timer
+    1208 delayed acks sent
+    Quick ack mode was activated 311 times
+    2 times the listen queue of a socket overflowed
+    2 SYNs to LISTEN sockets dropped
+    20525 packets directly queued to recvmsg prequeue.
+    105360 bytes directly in process context from backlog
+    219300926 bytes directly received in process context from prequeue
+    422039 packet headers predicted
+    15850 packets header predicted and directly queued to user
+    189913 acknowledgments not containing data payload received
+    297921 predicted acknowledgments
+    2119 times recovered from packet loss by selective acknowledgements
+    Detected reordering 7 times using FACK
+    Detected reordering 232 times using SACK
+    Detected reordering 35 times using time stamp
+    40 congestion windows fully recovered without slow start
+    59 congestion windows partially recovered using Hoe heuristic
+    12 congestion windows recovered without slow start by DSACK
+    88 congestion windows recovered without slow start after partial ack
+    51 timeouts after SACK recovery
+    60 timeouts in loss state
+    5910 fast retransmits
+    2287 forward retransmits
+    1675 retransmits in slow start
+    3 other TCP timeouts
+    TCPLossProbes: 37
+    TCPLossProbeRecovery: 31
+    448 SACK retransmits failed
+    311 DSACKs sent for old packets
+    865 DSACKs received
+    185 DSACKs for out of order packets received
+    26 connections reset due to unexpected data
+    23 connections reset due to early user close
+    TCPDSACKIgnoredOld: 23
+    TCPDSACKIgnoredNoUndo: 284
+    TCPSpuriousRTOs: 81
+    TCPSackShifted: 375
+    TCPSackMerged: 29646
+    TCPSackShiftFallback: 145513
+    TCPRcvCoalesce: 56307
+    TCPOFOQueue: 54485
+    TCPSpuriousRtxHostQueues: 3
+    TCPAutoCorking: 26119
+    TCPOrigDataSent: 2593864
+IpExt:
+    OutMcastPkts: 10
+    InBcastPkts: 330
+    InOctets: 5271339881
+    OutOctets: 4485550395
+    OutMcastOctets: 1630
+    InBcastOctets: 138176
+    InNoECTPkts: 1040594

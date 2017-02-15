@@ -1,0 +1,105 @@
+Chain INPUT (policy ACCEPT 110 packets, 458K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 6254   82M ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+ 2681   67M ACCEPT     all  --  *      *       10.158.0.24          0.0.0.0/0           
+ 4285   46M ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+ 5393   72M ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+  254 49520 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+ 104K 6050K ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 122K packets, 562M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    1676960 total packets received
+    6 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    1676954 incoming packets delivered
+    1550031 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    77 active connections openings
+    2807 passive connection openings
+    0 failed connection attempts
+    1138 connection resets received
+    13 connections established
+    1671252 segments received
+    4882637 segments send out
+    15782 segments retransmited
+    0 bad segments received.
+    77 resets sent
+Udp:
+    5547 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5374 packets sent
+UdpLite:
+TcpExt:
+    6 invalid SYN cookies received
+    19 TCP sockets finished time wait in fast timer
+    1375 delayed acks sent
+    Quick ack mode was activated 348 times
+    21093 packets directly queued to recvmsg prequeue.
+    226133842 bytes directly received in process context from prequeue
+    702180 packet headers predicted
+    16245 packets header predicted and directly queued to user
+    259616 acknowledgments not containing data payload received
+    518481 predicted acknowledgments
+    4455 times recovered from packet loss by selective acknowledgements
+    Detected reordering 50 times using FACK
+    Detected reordering 398 times using SACK
+    Detected reordering 162 times using time stamp
+    68 congestion windows fully recovered without slow start
+    149 congestion windows partially recovered using Hoe heuristic
+    16 congestion windows recovered without slow start by DSACK
+    68 congestion windows recovered without slow start after partial ack
+    TCPLostRetransmit: 20
+    69 timeouts after SACK recovery
+    50 timeouts in loss state
+    13397 fast retransmits
+    638 forward retransmits
+    1169 retransmits in slow start
+    7 other TCP timeouts
+    TCPLossProbes: 56
+    TCPLossProbeRecovery: 43
+    392 SACK retransmits failed
+    348 DSACKs sent for old packets
+    788 DSACKs received
+    184 DSACKs for out of order packets received
+    27 connections reset due to unexpected data
+    24 connections reset due to early user close
+    TCPDSACKIgnoredOld: 30
+    TCPDSACKIgnoredNoUndo: 499
+    TCPSpuriousRTOs: 67
+    TCPSackShifted: 362
+    TCPSackMerged: 36906
+    TCPSackShiftFallback: 170895
+    TCPRcvCoalesce: 78768
+    TCPOFOQueue: 94339
+    TCPSpuriousRtxHostQueues: 1
+    TCPAutoCorking: 41001
+    TCPOrigDataSent: 4124572
+IpExt:
+    OutMcastPkts: 10
+    InBcastPkts: 334
+    InOctets: 8029014430
+    OutOctets: 7302403995
+    OutMcastOctets: 1630
+    InBcastOctets: 139488
+    InNoECTPkts: 1676960

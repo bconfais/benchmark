@@ -1,0 +1,107 @@
+Chain INPUT (policy ACCEPT 134 packets, 462K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 2793  233K ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+ 3832  338K ACCEPT     all  --  *      *       10.158.0.10          0.0.0.0/0           
+10784  164M ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+ 6715  164M ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+  267 58380 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+ 120K 6685K ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 141K packets, 840M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    3561385 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    3561381 incoming packets delivered
+    3289216 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    93 active connections openings
+    3730 passive connection openings
+    0 failed connection attempts
+    1616 connection resets received
+    14 connections established
+    3555540 segments received
+    10638785 segments send out
+    15126 segments retransmited
+    0 bad segments received.
+    123 resets sent
+Udp:
+    5816 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5811 packets sent
+UdpLite:
+TcpExt:
+    26 invalid SYN cookies received
+    22 TCP sockets finished time wait in fast timer
+    2002 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 394 times
+    4 times the listen queue of a socket overflowed
+    4 SYNs to LISTEN sockets dropped
+    18970 packets directly queued to recvmsg prequeue.
+    230051481 bytes directly received in process context from prequeue
+    1472686 packet headers predicted
+    14856 packets header predicted and directly queued to user
+    443137 acknowledgments not containing data payload received
+    1213366 predicted acknowledgments
+    4271 times recovered from packet loss by selective acknowledgements
+    Detected reordering 10 times using FACK
+    Detected reordering 316 times using SACK
+    Detected reordering 53 times using time stamp
+    45 congestion windows fully recovered without slow start
+    89 congestion windows partially recovered using Hoe heuristic
+    22 congestion windows recovered without slow start by DSACK
+    53 congestion windows recovered without slow start after partial ack
+    58 timeouts after SACK recovery
+    11 timeouts in loss state
+    13122 fast retransmits
+    1332 forward retransmits
+    427 retransmits in slow start
+    1 other TCP timeouts
+    TCPLossProbes: 14
+    TCPLossProbeRecovery: 13
+    159 SACK retransmits failed
+    394 DSACKs sent for old packets
+    694 DSACKs received
+    268 DSACKs for out of order packets received
+    34 connections reset due to unexpected data
+    31 connections reset due to early user close
+    TCPDSACKIgnoredOld: 16
+    TCPDSACKIgnoredNoUndo: 263
+    TCPSpuriousRTOs: 53
+    TCPSackShifted: 526
+    TCPSackMerged: 48395
+    TCPSackShiftFallback: 319498
+    TCPRcvCoalesce: 165102
+    TCPOFOQueue: 212291
+    TCPSpuriousRtxHostQueues: 8
+    TCPAutoCorking: 82407
+    TCPOrigDataSent: 9046049
+IpExt:
+    OutMcastPkts: 6
+    InBcastPkts: 32
+    InOctets: 17204782485
+    OutOctets: 16299213249
+    OutMcastOctets: 978
+    InBcastOctets: 12448
+    InNoECTPkts: 3561385

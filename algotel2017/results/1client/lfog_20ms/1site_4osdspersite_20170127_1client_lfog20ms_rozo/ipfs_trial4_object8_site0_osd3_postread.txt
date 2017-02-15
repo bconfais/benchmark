@@ -1,0 +1,107 @@
+Chain INPUT (policy ACCEPT 118 packets, 459K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+ 4557   11M ACCEPT     all  --  *      *       10.158.0.1           0.0.0.0/0           
+ 6089   57M ACCEPT     all  --  *      *       10.158.0.10          0.0.0.0/0           
+ 7418   77M ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+ 5940  143M ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+  224 50284 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+ 105K 5900K ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 125K packets, 799M bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    2148981 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    2148977 incoming packets delivered
+    1987875 requests sent out
+Icmp:
+    5 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        destination unreachable: 1
+        echo requests: 4
+    4 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo replies: 4
+IcmpMsg:
+        InType3: 1
+        InType8: 4
+        OutType0: 4
+Tcp:
+    86 active connections openings
+    3191 passive connection openings
+    0 failed connection attempts
+    1355 connection resets received
+    13 connections established
+    2143432 segments received
+    6307681 segments send out
+    10148 segments retransmited
+    0 bad segments received.
+    115 resets sent
+Udp:
+    5520 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5515 packets sent
+UdpLite:
+TcpExt:
+    23 invalid SYN cookies received
+    20 TCP sockets finished time wait in fast timer
+    1612 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 331 times
+    4 times the listen queue of a socket overflowed
+    4 SYNs to LISTEN sockets dropped
+    18957 packets directly queued to recvmsg prequeue.
+    230051481 bytes directly received in process context from prequeue
+    857960 packet headers predicted
+    14856 packets header predicted and directly queued to user
+    297964 acknowledgments not containing data payload received
+    721572 predicted acknowledgments
+    2603 times recovered from packet loss by selective acknowledgements
+    Detected reordering 10 times using FACK
+    Detected reordering 246 times using SACK
+    Detected reordering 36 times using time stamp
+    41 congestion windows fully recovered without slow start
+    71 congestion windows partially recovered using Hoe heuristic
+    18 congestion windows recovered without slow start by DSACK
+    37 congestion windows recovered without slow start after partial ack
+    39 timeouts after SACK recovery
+    7 timeouts in loss state
+    8573 fast retransmits
+    1090 forward retransmits
+    322 retransmits in slow start
+    1 other TCP timeouts
+    TCPLossProbes: 13
+    TCPLossProbeRecovery: 12
+    101 SACK retransmits failed
+    331 DSACKs sent for old packets
+    614 DSACKs received
+    231 DSACKs for out of order packets received
+    32 connections reset due to unexpected data
+    28 connections reset due to early user close
+    TCPDSACKIgnoredOld: 14
+    TCPDSACKIgnoredNoUndo: 232
+    TCPSpuriousRTOs: 37
+    TCPSackShifted: 323
+    TCPSackMerged: 30229
+    TCPSackShiftFallback: 208769
+    TCPRcvCoalesce: 105951
+    TCPOFOQueue: 125930
+    TCPSpuriousRtxHostQueues: 8
+    TCPAutoCorking: 50307
+    TCPOrigDataSent: 5383909
+IpExt:
+    OutMcastPkts: 6
+    InBcastPkts: 32
+    InOctets: 10509693681
+    OutOctets: 9641427627
+    OutMcastOctets: 978
+    InBcastOctets: 12448
+    InNoECTPkts: 2148981

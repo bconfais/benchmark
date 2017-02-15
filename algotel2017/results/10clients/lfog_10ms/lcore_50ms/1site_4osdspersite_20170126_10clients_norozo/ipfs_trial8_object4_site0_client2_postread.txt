@@ -1,0 +1,101 @@
+Chain INPUT (policy ACCEPT 226 packets, 917K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+  391 1026K ACCEPT     all  --  *      *       10.158.0.25          0.0.0.0/0           
+ 1212 3066K ACCEPT     all  --  *      *       10.158.0.26          0.0.0.0/0           
+ 1205 3068K ACCEPT     all  --  *      *       10.158.0.27          0.0.0.0/0           
+ 1211 3068K ACCEPT     all  --  *      *       10.158.0.28          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.29          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.3           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.30          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.31          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.32          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.34          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.35          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.36          0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.4           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.5           0.0.0.0/0           
+    0     0 ACCEPT     all  --  *      *       10.158.0.6           0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+
+Chain OUTPUT (policy ACCEPT 4231 packets, 264K bytes)
+ pkts bytes target     prot opt in     out     source               destination         
+Ip:
+    314563 total packets received
+    4 with invalid addresses
+    0 forwarded
+    0 incoming packets discarded
+    314559 incoming packets delivered
+    250782 requests sent out
+Icmp:
+    8 ICMP messages received
+    0 input ICMP message failed.
+    ICMP input histogram:
+        echo replies: 8
+    8 ICMP messages sent
+    0 ICMP messages failed
+    ICMP output histogram:
+        echo request: 8
+IcmpMsg:
+        InType0: 8
+        OutType8: 8
+Tcp:
+    478 active connections openings
+    363 passive connection openings
+    0 failed connection attempts
+    2 connection resets received
+    3 connections established
+    309237 segments received
+    1598835 segments send out
+    336 segments retransmited
+    0 bad segments received.
+    26 resets sent
+Udp:
+    5184 packets received
+    0 packets to unknown port received.
+    0 packet receive errors
+    5132 packets sent
+UdpLite:
+TcpExt:
+    405 TCP sockets finished time wait in fast timer
+    1 packets rejects in established connections because of timestamp
+    465 delayed acks sent
+    1 delayed acks further delayed because of locked socket
+    Quick ack mode was activated 1821 times
+    79007 packets directly queued to recvmsg prequeue.
+    159336 bytes directly in process context from backlog
+    578960913 bytes directly received in process context from prequeue
+    48952 packet headers predicted
+    42322 packets header predicted and directly queued to user
+    31619 acknowledgments not containing data payload received
+    78604 predicted acknowledgments
+    104 times recovered from packet loss by selective acknowledgements
+    Detected reordering 4 times using FACK
+    Detected reordering 176 times using SACK
+    Detected reordering 24 times using time stamp
+    55 congestion windows fully recovered without slow start
+    49 congestion windows partially recovered using Hoe heuristic
+    136 fast retransmits
+    200 forward retransmits
+    1821 DSACKs sent for old packets
+    814 DSACKs sent for out of order packets
+    317 DSACKs received
+    2 connections reset due to unexpected data
+    19 connections reset due to early user close
+    TCPDSACKIgnoredOld: 11
+    TCPDSACKIgnoredNoUndo: 296
+    TCPSackShifted: 44
+    TCPSackMerged: 1489
+    TCPSackShiftFallback: 19012
+    TCPRcvCoalesce: 16640
+    TCPOFOQueue: 48343
+    TCPOFOMerge: 811
+    TCPAutoCorking: 40
+    TCPOrigDataSent: 1438545
+IpExt:
+    InBcastPkts: 182
+    InOctets: 1355875770
+    OutOctets: 2084639708
+    InBcastOctets: 68154
+    InNoECTPkts: 314563
