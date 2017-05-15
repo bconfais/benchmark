@@ -70,7 +70,7 @@ if '__main__' == __name__:
   op = sys.argv[1]
   nb = int(sys.argv[2])
   size = int(sys.argv[3])
-  nodes = [sys.argv[4], sys.argv[5], sys.argv[6], sys.argv[7]]
+  nodes = [sys.argv[4]]
   dummy = '/tmp/test/dummy'
 
 #  if 'write' == op:
