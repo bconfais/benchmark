@@ -1,0 +1,13 @@
+[Unit]
+Description=InterPlanetary File System (IPFS) daemon
+
+[Service]
+Type=simple
+Environment=IPFS_PATH=/mnt/ipfs/
+ExecStart=/tmp/ipfs daemon --routing dht --debug
+#Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
+

@@ -363,7 +363,6 @@ def extract(systems, trials, reads, objects):
             continue
           object = find_object(line, objects, trial, read, s)
           if object is None:
-            print('->error with %s' % (str(line)))
             continue
           time, duplicate = hops_for_object2(s, site, object, trial, read, line)
           lhops = 1
@@ -378,10 +377,9 @@ def extract(systems, trials, reads, objects):
             continue
           object = find_object(line, objects, trial, read, s)
           if object is None:
-            print('->error with %s' % (str(line)))
             continue
-          time, duplicate  = hops_for_object(s, site, object, trial, read, line)
-          lhops = time
+          lhops, duplicate  = hops_for_object(s, site, object, trial, read, line)
+          time = int((lhops*(lhops+1))/2.0)
           if duplicate == True:
             continue
 
@@ -395,7 +393,6 @@ def extract(systems, trials, reads, objects):
           unit = r.group(2)
           object = find_object(line, objects, trial, read, s)
           if object is None:
-            print('->error with %s' % (str(line)))
             continue
           if b'ms' == unit:
             time /= 1000;
@@ -416,7 +413,6 @@ def extract(systems, trials, reads, objects):
           unit = r.group(2)
           object = find_object(line, objects, trial, read, s)
           if object is None:
-            print('->error with %s' % (str(line)))
             continue
           if b'ms' == unit:
             time /= 1000;
